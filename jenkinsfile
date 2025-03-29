@@ -14,12 +14,12 @@ pipeline{
         }
         stage('Test'){
             steps{
-                sh 'npm test' || echo "No tests defined"
+                sh 'npm test || echo "No tests defined"'
             }
         }
         stage('Build'){
             steps{
-                sh 'npm run build' || echo "No build defined"
+                sh 'npm run build || echo "No build defined"'
             }
         }
     }

@@ -7,6 +7,12 @@ pipeline{
 
     stages{
 
+        stage('Git Checkout'){
+            steps{
+        git branch:'main' , url:"https://github.com/manit101/DevopsEval.git"
+            }
+        }
+
         stage('Install Dependencies'){
             steps{
                 sh 'npm install || echo "No dependencies defined"'
